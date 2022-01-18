@@ -1,8 +1,10 @@
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.LinkedList;
 import java.util.List;
+import java.util.ListIterator;
 import java.util.Scanner;
 
 public class Handson {
@@ -13,9 +15,15 @@ public class Handson {
 		names.push("Sam");
 		names.push("Kwon");
 		names.push("Bolden");
-		System.out.println(names.pop());
-		System.out.println(names.remove());
-		System.out.println(names.removeFirst());
+
+		
+		ListIterator<String> it = names.listIterator();
+		it.next();
+		it.add("Baller");
+
+		for(String dummy: names) {
+			System.out.println(dummy);
+		}
 
 	}
 
